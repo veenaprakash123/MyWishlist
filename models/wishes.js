@@ -1,7 +1,8 @@
 const mongoose = require('../db/connection')
 
 const wishSchema = new mongoose.Schema({
-    wish: {type: String, required: true},
+    
+    name: {type: String, required: true},
     description: String,
     image: String,
     why: String

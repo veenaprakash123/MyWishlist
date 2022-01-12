@@ -1,0 +1,18 @@
+<h2>Edit your Wish</h2>
+
+<form action="/wishlist/<%=wish.id%>?_method=PUT" method="POST">
+
+    <label for="name">Wish</label>
+    <input type="text" name="name" id="name" value="<%=wish.name%>">
+
+    <label for="description">Description</label>
+    <input type="text" name="description" id="description" value="<%=wish.description%>">
+
+    <label for="image">Image</label>
+    <input type="text" name="image" id="image" value="<%=wish.image%>">
+
+    <label for="why">Why?</label>
+    <input type="text" name="why" id="why" value="<%=wish.why%>">
+
+    <input type="submit" value="Edit Wish">
+</form>

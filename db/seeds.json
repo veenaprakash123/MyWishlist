@@ -1,12 +1,12 @@
 [
     {
-        "wish": "kettle",
+        "name": "Glass kettle",
         "description": "Glass kettle to make tea.",
         "image": "picture of kettle",
         "why": "I love tea, and I will be able to use this kettle every morning and evening"
     },
     {
-        "wish": "Moleskine Weekly Planner 2022",
+        "name": "Moleskine Weekly Planner 2022",
         "description": "A Weekly planner that when opened to to any week, includes a section for each day of the week on the right side and a fully lined page on the left side for additional notes.",
         "image": "picture of planner",
         "why": "I like to stay organized and plan for the upcoming week on Sunday nights. This planner will really help me plan for 2022!"

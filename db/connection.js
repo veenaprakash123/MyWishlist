@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const mongoURI = 'mongodb://localhost27017/wishlist'
+const mongoURI = 'mongodb://localhost:27017/wishlist'
 
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,

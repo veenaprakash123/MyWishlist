@@ -4,9 +4,38 @@ const Wish = require('../models/wishes')
 
 
 router.get('/wishlist', (req,res)=>{
-    res.send('Hello')
+    Wish.find({}, (err, wishes) =>{
+        res.render('index', {wishes})  
+    })
+})
+
+router.get('/wishlist/new', (req,res)=>{
+    res.render('new')
+})
+
+router.get('/wishlist/:id', (req,res)=>{
+    Wish.findById(req.params.id, (err, foundWish)=>{
+        res.render('show.ejs', {wish: foundWish})
+    })
+})
+
+router.get('/wishlist/:id/edit', (req,res)=>{
+    Wish.findById(req.params.id, (err, wishSelected)=>{
+        res.render('edit', {wish: wishSelected})
+    })
+})
+
+router.post('/wishlist', (req,res)=> {
+    Wish.create(req.body, (err, newWish)=>{
+        res.redirect('/wishlist')
+    })
 })
 
 
+router.put('/wishlist/:id', (req,res)=>{
+    Wish.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedWish)=>{
+        res.render('show', {wish: updatedWish})
+    })
+})
 
 module.exports = router
