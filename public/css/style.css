@@ -1,7 +1,49 @@
+
+
 body {
-    background: pink
+    background: white;
+    color: black;
+    font-family:sans-serif;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #item {
-    border: royalblue;
+    color: black;
+    background-color:honeydew ;
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+    border: 10px solid rgb(252, 212, 34);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#showItem {
+    color: white;
+    background-color: cadetblue;
+    padding: 20px;
+    height: 40%;
+    width: 40%;
+    border: 10px solid royalblue;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }

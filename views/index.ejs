@@ -2,14 +2,19 @@
 
 <% wishes.forEach ((wish) => { %>
 
-    <ul id="item">
 
-        <li><a href='/wishlist/<%=wish.id%>'> <%= wish.name %> </a> </li>
-        <li> <em><%= wish.description%></em></li>
-        <li> <img style="width: 200px;" src="<%=wish.image%>" alt=""></image></li>
+    <div id="masterList">
+        <ul id="item">
 
-    </ul>
+            <li><a href='/wishlist/<%=wish.id%>'> <%= wish.name %> </a> </li>
+            <li> <em><%= wish.description%></em></li>
+            <li> <img style="width: 200px;" src="<%=wish.image%>" alt=""></image></li>
 
-<% }) %>
+        </ul>
+    </div>  
+   
+    <% }) %>
+
+
 
 <a href="/wishlist/new">Add Wish</a>
