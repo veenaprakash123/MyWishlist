@@ -38,4 +38,9 @@ router.put('/wishlist/:id', (req,res)=>{
     })
 })
 
+router.post('/wishlist/:id', (req,res)=> {
+    Wish.findByIdAndDelete(req.params.id, (err, wishDeleted)=>{
+        res.redirect('/wishlist')
+    })
+})
 module.exports = router
