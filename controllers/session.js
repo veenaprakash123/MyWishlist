@@ -23,10 +23,13 @@ router.get('/session', (req,res) => {
             }else{
                 // Here we are encypting the password 
                 const salt = bcrypt.genSaltSync(10)
-                // salt is extra "garbage" that gets throen into encrypted password. The more salt, the more secure. 
+                // Salt is extra "garbage" that gets throen into encrypted password. The more salt, the more secure. 
                 const hashedPassword = bcrypt.hashSync(req.body.password, salt)
-                // the first argument is the string we are encypting and the second argument is the salt.
-                console.log(hashedPassword)
+                // The first argument is the string we are encypting and the second argument is the salt.
+                req.body.password = hashedPassword
+                // We are reassigning the password to this new hashed password
+                const createdUser = await User.create(req.body)
+                console.log(createdUser)
                 res.send('check terminal')
             }
         }else {
