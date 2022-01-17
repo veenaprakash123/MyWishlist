@@ -40,4 +40,9 @@ router.get('/session', (req,res) => {
      }
  })
 
+
+ router.get('/session/login', (req,res,next)=>{
+     res.render('session/login.ejs')
+ })
+
  module.exports = router
