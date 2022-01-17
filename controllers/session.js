@@ -29,8 +29,9 @@ router.get('/session', (req,res) => {
                 req.body.password = hashedPassword
                 // We are reassigning the password to this new hashed password
                 const createdUser = await User.create(req.body)
-                console.log(createdUser)
-                res.send('check terminal')
+                req.session.username = createdUser
+                res.redirect('/wishlist')
+                
             }
         }else {
             res.send(`Passwords must match.`)
@@ -43,6 +44,29 @@ router.get('/session', (req,res) => {
 
  router.get('/session/login', (req,res,next)=>{
      res.render('session/login.ejs')
+ })
+
+ router.post('/session/login', async (req,res,next)=> {
+     try {
+        // First we need to find the user that just logged in from the existing users. We first check if the username exists in our database of usernames. 
+        const userToLogin = await User.findOne({username: req.body.username})
+        if (userToLogin) {
+            // Now we check if the passwords match. 
+            // We do this with bcrypt.compareSync. compareSync compares the first cleartext argument with the encrypted second argument.
+            const validPassword = bcrypt.compareSync(req.body.password, userToLogin.password)
+             // Returns a boolean, true if they match, false if they don't match.
+             if (validPassword){
+                req.session.username = userToLogin.username 
+                res.redirect('/wishlist')
+             } else{
+                res.redirect('/session/login')
+             }
+        } else {
+            res.redirect('/session/login')
+        }
+     } catch (err){
+         next(err)
+     }
  })
 
  module.exports = router

@@ -1,7 +1,8 @@
+require('dotenv').config()
 const express = require('express')
 const multer = require('multer')
 const app = express()
-PORT = 3000
+const { PORT, SESSION_SECRET } = process.env
 
 // const fileStorageEngine = multer.diskStorage({
 //     destination: (req, file, cb) => {
@@ -27,6 +28,7 @@ app.use(express.static('public'))
 app.use(methodOverride('_method'))
 
 const expressEJSLayouts = require('express-ejs-layouts')
+const session = require('express-session')
 const wishController = require('./controllers/wishes')
 const sessionController = require('./controllers/session')
 
@@ -43,6 +45,13 @@ app.use(routeHit)
 app.use(expressEJSLayouts)
 app.set('view engine', 'ejs')
 
+// session middleware
+app.use(session({
+    secret: SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+}))
+  
 
 app.use(wishController)
 app.use(sessionController)
