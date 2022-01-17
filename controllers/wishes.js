@@ -2,10 +2,13 @@ const express = require('express')
 const router = express.Router()
 const Wish = require('../models/wishes')
 
-
+// Home route:
 router.get('/wishlist', (req,res)=>{
     Wish.find({}, (err, wishes) =>{
-        res.render('index', {wishes})  
+        res.render('index', {
+            wishes,
+            // username: req.session.username
+        })  
     })
 })
 

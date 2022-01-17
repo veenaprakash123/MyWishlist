@@ -15,7 +15,7 @@ body {
     background-color:honeydew ;
     padding: 20px;
     height: 300px;
-    width: 300px;
+    width: 600px;
     border: 10px solid rgb(252, 212, 34);
     list-style: none;
     display: flex;
@@ -39,6 +39,32 @@ body {
 
 }
 
+#welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#wishlistHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    font-size: xx-large;
+}
+
+
+#addWish{
+    display: flex;
+    flex-direction: column;
+    margin: 0 40 0 40
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 div {
     display: flex;

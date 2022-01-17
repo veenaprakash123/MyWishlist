@@ -8,6 +8,17 @@
     <title>My Wishlist</title>
 </head>
 <body>
+    <% if (username) {%>
+        <p id="welcome"> Welcome <%=username%>!</p>
+    <% } %>
+    <nav>
+        <ul>
+            <a href="/wishlist">Wishlist</a>
+            <a href="/wishlist/new">Add New Wish</a>
+            <a href="/session/register">Register</a>
+            <a href="/session/login">Login</a>
+        </ul>
+    </nav>
     <%- body %>
 </body>
 </html>

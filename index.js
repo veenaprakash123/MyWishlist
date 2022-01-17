@@ -53,6 +53,12 @@ app.use(session({
 }))
   
 
+app.use((req,res,next)=>{
+    res.locals.username = req.session.username
+    // Making username available in all views
+    next()
+})
+
 app.use(wishController)
 app.use(sessionController)
 
