@@ -25,4 +25,14 @@ Successes:
 
 User can log in and the shoppable links can be added for each wishlist item. 
 
-[project2wireframes](https://user-images.githubusercontent.com/91581821/150030463-7b646f53-9263-4ad5-889d-69fe60755efe.jpg)
+![project2wireframes](https://user-images.githubusercontent.com/91581821/150036108-286712d7-dd69-411a-8913-6652bdbb5ca1.png)
+
+
+
+Finished result: 
+
+<img width="1250" alt="mainpage" src="https://user-images.githubusercontent.com/91581821/150035923-85675206-8e73-451d-889b-9dfbf5291d0e.png">
+<img width="1024" alt="login" src="https://user-images.githubusercontent.com/91581821/150036008-4d454faa-56dd-48ea-8d37-593897e15c48.png">
+<img width="1297" alt="addwish" src="https://user-images.githubusercontent.com/91581821/150036090-de108897-0d35-4137-9ac3-2d64c38af96c.png">
+<img width="1235" alt="showwish" src="https://user-images.githubusercontent.com/91581821/150036252-b56cc640-03d4-4a53-af78-b8d90c5f8717.png">
+
