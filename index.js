@@ -63,4 +63,4 @@ app.use(wishController)
 app.use(sessionController)
 
 
-app.listen(PORT, ()=> console.log(`Can you feel the love on Port ${PORT}`))
+app.listen(app.get('port'), ()=> console.log(`Can you feel the love on Port ${app.get('port')}`))
