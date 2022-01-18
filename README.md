@@ -15,7 +15,7 @@ As a User I want the ability to view the details of any item on the wishlist so 
 As a User I want to easily navigate to and from the wishlist from other pages ('Add wish', 'Edit wish' etc.)
 
 
-Struggles: 
+Issues: 
 
 Two major areas I struggled in were the ability to upload images using multer and the CSS. I would like to continue working on this project and try to use multer so that the User isn't limited to the images found online, and I would love to familiarize myself with bootstrap to make the app look better as a whole. 
 
