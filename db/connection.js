@@ -2,7 +2,7 @@ require('dotenv').env
 
 const mongoose = require('mongoose')
 
-const mongoURI = process.env.NODE_ENV === 'production' ? process.env.MONGODB_URI : 'mongodb://localhost:27017/wishlist'
+const mongoURI = process.env.NODE_ENV === 'production'?process.env.MONGODB_URI : 'mongodb://localhost:27017/wishlist'
 
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
