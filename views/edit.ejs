@@ -1,6 +1,6 @@
-<h2>Edit your Wish</h2>
+<h2 class="pageHeader">Edit your Wish</h2>
 
-<form action="/wishlist/<%=wish.id%>?_method=PUT" method="POST">
+<form action="/wishlist/<%=wish.id%>?_method=PUT" method="POST" class="wishEdits">
 
     <label for="name">Wish</label>
     <input type="text" name="name" id="name" value="<%=wish.name%>">

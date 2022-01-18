@@ -1,7 +1,7 @@
 
 
 body {
-    background: white;
+    background: lightblue;
     color: black;
     font-family:sans-serif;
     margin: 0 auto;
@@ -47,7 +47,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#wishlistHeader{
+.pageHeader{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,19 +57,63 @@ body {
 }
 
 
-#addWish{
-    display: flex;
-    flex-direction: column;
-    margin: 0 40 0 40
-    justify-content: center;
-    align-items: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
 div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+}
+
+
+nav > ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    margin: 10 20 10 20;
+    padding-left: 50px;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+input[type=text] {
+    width: 15%;
+    padding: 7px 10px;
+    margin: 10px;
+    box-sizing: content-box;
+  }
+
+input[type=password] {
+    width: 15%;
+    padding: 7px 10px;
+    margin: 10px;
+    box-sizing: content-box;
+  }
+
+
+input:focus{
+    background-color: pink;
+  }
+
+label{
+    margin:0;
+
+  }
+
+.wishEdits {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#delete {
+    width: 60px;
 }

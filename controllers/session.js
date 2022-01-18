@@ -69,4 +69,11 @@ router.get('/session', (req,res) => {
      }
  })
 
+
+router.get('/session/logout', (req,res)=>{
+    req.session.destroy()
+    res.redirect('/session/login')
+})
+
+
  module.exports = router
