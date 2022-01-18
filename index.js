@@ -2,7 +2,9 @@ require('dotenv').config()
 const express = require('express')
 const multer = require('multer')
 const app = express()
-const { PORT, SESSION_SECRET } = process.env
+const {SESSION_SECRET} = process.env
+const PORT = process.env.PORT || 3000
+
 
 // const fileStorageEngine = multer.diskStorage({
 //     destination: (req, file, cb) => {
@@ -63,4 +65,4 @@ app.use(wishController)
 app.use(sessionController)
 
 
-app.listen(app.get('port'), ()=> console.log(`Can you feel the love on Port ${app.get('port')}`))
+app.listen(PORT, ()=> console.log(`Can you feel the love on Port ${PORT}`))
