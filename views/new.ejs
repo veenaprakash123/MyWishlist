@@ -1,20 +1,31 @@
 <h2 class="pageHeader">Add a Wish!</h2>
 
-<form action="/wishlist" method="POST" class="wishEdits"> 
-    <label for="name">Wish</label>
+<Form action="/wishlist" method="POST" class="wishEdits"> 
+
+    <Form.Group classname="mb-3" controlId="formGroupEmail">
+    <Form.Label for="name">Wish</Form.Label>
     <input type="text" name="name" id="name">
+    </Form.Group>
 
-    <label for="description">Description</label>
+    <Form.Group classname="mb-3" controlId="formGroupEmail">
+    <Form.Label for="description">Description</Form.Label>
     <input type="text" name="description" id="description">
+    </Form.Group>
 
-    <label for="image">Image</label>
+    <Form.Group classname="mb-3" controlId="formGroupEmail">
+    <Form.Label for="image">Image</Form.Label>
     <input type="text" name="image" id="image">
+    </Form.Group>
 
-    <label for="why">Why?</label>
+    <Form.Group classname="mb-3" controlId="formGroupEmail">
+    <Form.Label for="why">Why?</Form.Label>
     <input type="text" name="why" id="why">
+    </Form.Group>
 
-    <label for="shop">Shoppable link</label>
-    <input type="text" name="shop" id="shop">
+    <Form.Group classname="mb-3" controlId="formGroupEmail">
+    <Form.Label for="shop">Shoppable link</Form.Label>
+    <Form.Control type="text" name="shop" id="shop"></Form.Control>
+    </Form.Group>
 
     <input type="submit" value="Add Wish">
-</form>
+</Form>
